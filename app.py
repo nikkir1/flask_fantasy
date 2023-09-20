@@ -1,22 +1,22 @@
-from flask import Flask, render_template, abort, redirect, url_for
+from flask import Flask, render_template, redirect, url_for
 
 app = Flask(__name__)
 
 ids_with_images = {
-    '111': '../static/111.png',
-    '11': '../static/11.jpg',
-    '12': '../static/12.jpg',
-    '13': '../static/13.png',
-    '15': '../static/15.png',
-    '21': '../static/21.png',
-    '22': '../static/22.png',
-    '23': '../static/23.png',
-    '42': '../static/42.png',
-    '73': '../static/73.png',
-    '85': '../static/85.png',
-    '91': '../static/91.png',
-    '72': '../static/72.png',
-    '53': '../static/53.png',
+    '111': '111.png',
+    '11': '11.jpg',
+    '12': '12.jpg',
+    '13': '13.png',
+    '15': '15.png',
+    '21': '21.png',
+    '22': '22.png',
+    '23': '23.png',
+    '42': '42.png',
+    '73': '73.png',
+    '85': '85.png',
+    '91': '91.png',
+    '72': '72.png',
+    '53': '53.png',
 }
 
 hidden_id = '787'
@@ -34,4 +34,4 @@ def object(id):
         return redirect(url_for('home'))  # redirect to home page for non-existing id
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
